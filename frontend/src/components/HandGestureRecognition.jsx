@@ -194,14 +194,18 @@ mpHands.HAND_CONNECTIONS,
             )}
 
             <video
-              ref={videoRef}
-              className="absolute inset-0 w-full h-full hidden"
-              playsInline
-            />
-            <canvas
-              ref={canvasRef}
-              className="absolute inset-0 w-full h-full object-contain"
-            />
+  ref={videoRef}
+  className="absolute inset-0 w-full h-full"
+  playsInline
+  autoPlay
+  muted
+  style={{ transform: "scaleX(-1)" }}
+/>
+           <canvas
+  ref={canvasRef}
+  className="absolute inset-0 w-full h-full object-contain"
+  style={{ transform: "scaleX(-1)" }}
+/>
 
             {gesture && gesture.name !== 'Unknown' && (
               <div className="absolute top-4 left-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white px-6 py-3 rounded-full shadow-lg animate-pulse">
